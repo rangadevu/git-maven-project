@@ -4,7 +4,8 @@ pipeline {
 	    stage ( 'Maven test' ){
 		steps {
 		bat 'cd C:/Users/user/Desktop/Git-Moven-Pronect/'
-		bat ' mvn clean test'
+		bat 'mvn clean test'
+		}
 		}
 	    stage ('Maven Build') {
 	        steps {
@@ -17,6 +18,5 @@ pipeline {
 	       }
 	    }	
 		
-		}
 	}
 }
