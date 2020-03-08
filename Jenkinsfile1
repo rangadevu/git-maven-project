@@ -1,10 +1,21 @@
 pipeline {
     agent any
 	stages {
-	    stage ( 'Maven Build' ){
+	    stage ( 'Maven test' ){
 		steps {
-		bat ' mvn clean package'
+		bat 'cd C:/Users/user/Desktop/Git-Moven-Pronect/'
+		bat ' mvn test'
 		}
+	    stage (Maven Build) {
+	        steps {
+		bat 'mvn package'
+		}
+		}
+	    stage (Maven install) {
+	       steps {
+	       bat 'mvn install'
+	       }
+	    }	
 		
 		}
 	}
